@@ -3,12 +3,7 @@
 A modern, responsive **React + Tailwind CSS** portfolio website showcasing my projects, skills, and contact form.  
 Deployed using **GitHub Pages**.
 
----
-
-## 🚀 Live Demo
-🔗 **[View Portfolio](https://kiransai-5c5.github.io/FUTURE_FS_01/)**
-
----
+-
 
 ## 📌 Features
 - 🎨 **Responsive UI** — Works perfectly on desktop, tablet, and mobile
