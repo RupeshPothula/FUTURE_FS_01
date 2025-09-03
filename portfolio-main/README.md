@@ -25,10 +25,5 @@ Deployed using **GitHub Pages**.
 
 ---
 
-## ⚙️ Installation & Setup
-Clone the repository and install dependencies:
-```bash
-git clone https://github.com/kiransai-5C5/FUTURE_FS_01.git
-cd FUTURE_FS_01
-npm install
+
 
