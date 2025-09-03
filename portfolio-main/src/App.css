@@ -1,0 +1,77 @@
+/* Root & basic layout */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Fade & slide animations */
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slide-in-left { from { opacity: 0; transform: translateX(-40px);} to { opacity: 1; transform: translateX(0);} }
+@keyframes slide-in-right { from { opacity: 0; transform: translateX(40px);} to { opacity: 1; transform: translateX(0);} }
+.animate-fade-in { animation: fade-in 1s ease forwards; }
+.animate-slide-in-left { animation: slide-in-left 1s ease forwards; }
+.animate-slide-in-right { animation: slide-in-right 1s ease forwards; }
+
+/* Animated gradient background */
+body, #root {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #2c5364, #00c6ff, #0072ff);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Card effects */
+.attractive-card {
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: 0 2px 16px 0 rgba(0,255,255,0.08);
+  border: 1.5px solid #00c6ff44;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+}
+.attractive-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 8px 32px 0 #00c6ff88;
+  border-color: #00c6ff;
+}
+
+/* Button glow */
+.attractive-btn {
+  box-shadow: 0 0 0px #00c6ff;
+  transition: box-shadow 0.3s, background 0.3s;
+}
+.attractive-btn:hover {
+  box-shadow: 0 0 16px #00c6ff;
+  background: #00c6ff;
+  color: #222;
+}
+
+/* Drop shadows for text readability */
+.drop-shadow-md { text-shadow: 1px 1px 4px rgba(0,0,0,0.7); }
+.drop-shadow-lg { text-shadow: 2px 2px 8px rgba(0,0,0,0.7); }
+
+/* Staggered fade-in for projects and skills */
+.attractive-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  animation-fill-mode: forwards;
+}
+
+@keyframes staggerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-stagger-fade {
+  animation: staggerFadeIn 0.8s ease forwards;
+}
